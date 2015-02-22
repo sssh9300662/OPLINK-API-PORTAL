@@ -1,0 +1,6 @@
+= render :partial => "admin/docs/info", :object => @doc, :as => :doc
+
+%h2="Model list"
+= link_to_create "Create Model", new_admin_doc_model_path(@doc)
+
+= render :partial => "list", :object => @doc.models, :as => :models

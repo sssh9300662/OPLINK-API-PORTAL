@@ -1,0 +1,27 @@
+%h1="My Doc list"
+= link_to_create "Create Doc", new_admin_doc_path
+
+%table.table.table-hover
+  %thead
+    %tr
+      %th="#"
+      %th="name"
+      %th="description"
+      %th="version"
+      %th.last=""
+  %tbody
+    - @docs.each do |doc|
+      %tr
+        %td= doc.id
+        %td= link_to doc.name, admin_doc_path(doc)
+        %td= truncate(doc.description, :length => 30)
+        %td= doc.version
+        %td.last
+          = link_to edit_admin_doc_path(doc), :class => "btn btn-mini" do
+            %i.icon.icon-pencil
+            Edit
+          = link_to admin_doc_path(doc), :class => "btn btn-mini btn-danger", :method => :delete, :confirm => "confirm delete?" do
+            %i.icon-white.icon-remove
+            Delete
+
+= render :partial => "cooperated_docs", :as => :docs, :object => @cooperated_docs

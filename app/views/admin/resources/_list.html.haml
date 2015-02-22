@@ -1,0 +1,22 @@
+%table.table.table-hover
+  %thead
+    %tr
+      %th="#"
+      %th="name"
+      %th="sort"
+      %th.last=""
+  %tbody
+    - resources.each do |resource|
+      %tr
+        %td= resource.id
+        %td= link_to resource.name, admin_doc_resource_path(resource.doc, resource)
+        %td
+          = render :partial => "sort_buttons", :as => :button_urls, :object => resource_button_urls(resource)
+        %td.last
+          = link_to edit_admin_doc_resource_path(resource.doc, resource), :class => "btn btn-mini" do
+            %i.icon-pencil
+            Edit
+          - if can?(:destroy, resource)
+            = link_to admin_doc_resource_path(resource.doc, resource), :class => "btn btn-mini btn-danger", :method => :delete, :confirm => "confirm delete?" do
+              %i.icon-white.icon-remove
+              Delete

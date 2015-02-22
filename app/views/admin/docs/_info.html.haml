@@ -1,0 +1,14 @@
+%h1
+  = doc.name
+  = link_to edit_admin_doc_path(doc), :class => "btn btn-mini" do
+    %i.icon-pencil
+.doc_info
+  %ul
+    %li
+      = "Preview: "
+      = link_to(doc.preview_link, doc.preview_link)
+    - if doc.description.present?
+      %li= "description: #{doc.description}"
+    %li= "version: #{doc.version}"
+    - if doc.request_path.present?
+      %li= "API testing url format: #{doc.request_path}/{API Path}.json?#{doc.api_key_name}=#{doc.api_key}"

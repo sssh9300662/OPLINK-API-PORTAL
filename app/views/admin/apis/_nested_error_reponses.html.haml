@@ -1,0 +1,12 @@
+= form.link_to_add :error_responses, :class => "btn btn-mini", :data => { :target => "#form_error_response" } do
+  %i.icon-plus
+  Add Error Response
+  
+#form_error_response
+  = form.fields_for :error_responses do |form_error_response|
+    .form-inline
+      = form_error_response.link_to_remove :class => "btn btn-mini" do
+        %i.icon-minus
+        Delete
+      = form_error_response.input_field :code, :placeholder => "error code", :class => "input-small"
+      = form_error_response.input_field :reason, :placeholder => "error reason"

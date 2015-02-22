@@ -1,0 +1,29 @@
+<h1>Cooperated Doc list</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>name</th>
+      <th>description</th>
+      <th>version</th>
+      <th class="last"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% docs.each do |doc| %>
+      <tr>
+        <td><%= doc.id %></td>
+        <td><%= link_to doc.name, admin_doc_path(doc) %></td>
+        <td><%= truncate(doc.description, :length => 30) %></td>
+        <td><%= doc.version %></td>
+        <td class="last">
+          <%= link_to edit_admin_doc_path(doc), :class => "btn btn-mini" do %>
+            <i class="icon icon-pencil"></i>
+            Edit
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,11 @@
+= render :partial => "info", :object => @doc, :as => :doc
+  
+%h2= "Resources List"
+= link_to_create "Create Resource", new_admin_doc_resource_path(@doc)
+= render :partial => "admin/resources/list", :as => :resources, :object => @doc.resources.limit(5)
+= link_to_more_resources @doc, 5
+
+%h2= "Models List"
+= link_to_create "Create Model", new_admin_doc_model_path(@doc)
+= render :partial => "admin/models/list", :as => :models, :object => @doc.models.limit(5)
+= link_to_more_models @doc, 5

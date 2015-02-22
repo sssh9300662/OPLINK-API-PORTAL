@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OPLINK API Portal</title>
+  <%= csrf_meta_tag %>
+  <%= stylesheet_link_tag "application" %>
+  <%= yield :stylesheets %>
+</head>
+
+<body>
+
+  <%= render :partial => "common/menu" %>
+
+  <div class="container">
+
+    <% flash.each do |k, message| %>
+      <div class="alert fade in alert-<%=k%>">
+        <a href="#" class="close" data-dismiss="alert">x</a>
+        <%= message %>
+      </div>
+    <% end %>
+    <%= render_crumbs :format => :html_list, :ul_class => :breadcrumb, :separator => " > " %>
+    <div class="content">
+      <div class="row">
+        <%= yield %>
+        <%= yield (:sidebar) %>
+      </div> 
+  
+    </div>
+
+    <%= render :partial => "common/footer" %>    
+  </div>
+
+  <%= render :partial => "common/bootstrap_modal" %>   
+
+  <%= javascript_include_tag "application" %>
+  
+  <%= yield :javascripts %>
+
+</body>
+</html>

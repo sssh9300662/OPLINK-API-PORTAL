@@ -1,0 +1,3 @@
+%h1= "New Api"
+= simple_nested_form_for @api, :url => admin_doc_resource_apis_path(@doc, @resource), :html => { :class => 'form-horizontal' } do |f|
+  = render :partial => 'form', :object => f

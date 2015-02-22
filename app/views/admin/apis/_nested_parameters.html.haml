@@ -1,0 +1,20 @@
+= form.link_to_add :parameters, :class => "btn btn-mini", :data => { :target => "#form_parameter"} do
+  %i.icon-plus
+  Add Parameter
+#form_parameter
+  = form.fields_for :parameters do |form_parameter|
+    .form-inline
+      = form_parameter.link_to_remove :class => "btn btn-mini" do
+        %i.icon-minus
+        Delete
+      = form_parameter.input_field :param_type, :as => :select, :collection => Parameter::PARAM_TYPES, :class => "input-small", :include_blank => "-- parameter type --"
+      = form_parameter.input_field :name, :placeholder => :name, :class => "input-small"
+      = render_data_type_form(form_parameter, @doc)
+      = form_parameter.input_field :description, :placeholder => :description, :class => "input-medium"
+      %label
+        = form_parameter.input_field :required
+        required
+      %label
+        = form_parameter.input_field :allow_multiple
+        multiple
+      = form_parameter.input_field :allowable_values, :placeholder => "allow values", :class => "input-medium", :as => :string

@@ -1,0 +1,22 @@
+- api = form.object
+.form-inputs
+  = form.input :http_method, :as => :select, :collection => Api::HTTP_METHODS, :include_blank => false
+  = form.input :path, :placeholder => "/products/{id}.{format}", :hint => "Path should start with '/', and use {parameter name} to set parameters in path"
+  = form.input :summary, :placeholder => "Get a product by {id}"
+  = form.input :note
+  .control-group
+    %label.control-label= "Response Data Type"
+    .controls
+      = form.input_field :response_class, :id => "response_class"
+      = render_data_type_selector api.resource.doc, :to => "#response_class", :autohide => false
+  .control-group
+    %label.control-label= "Error Responses"
+    .controls
+      = render :partial => "nested_error_reponses", :object => form, :as => :form
+  %h3="Parameters"
+  .control-group
+    = render :partial => "nested_parameters", :object => form, :as => :form
+.form-actions
+  = form.submit :class => "btn btn-primary"
+  = link_to "Cancel", request.env["HTTP_REFERER"] ||admin_doc_resource_apis_path(api.resource.doc, api.resource), :class => "btn"
+= hidden_input_redirect_to

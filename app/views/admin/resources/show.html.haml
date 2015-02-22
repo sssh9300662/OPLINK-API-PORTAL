@@ -1,0 +1,31 @@
+= render :partial => "admin/docs/info", :object => @doc, :as => :doc
+= render :partial => "admin/resources/info", :object => @resource, :as => :resource
+
+%h2= "Apis List"
+= link_to "Create Api", new_admin_doc_resource_api_path(@doc, @resource), :class => "btn btn-primary"    
+
+%table.table.table-hover
+  %thead
+    %tr
+      %th="#"
+      %th="Path"
+      %th="Sort"
+      %th.last=""
+  %tbody
+    - @resource.apis.each do |api|
+      %tr
+        %td= api.id
+        %td
+          = api.http_method
+          &nbsp;
+          = api.path
+        %td
+          = render :partial => "sort_buttons", :as => :button_urls, :object => api_button_urls(api)
+        %td.last
+          = link_to edit_admin_doc_resource_api_path(@doc, @resource, api), :class => "btn btn-mini" do
+            %i.icon.icon-pencil
+            Edit
+          - if can?(:destroy, api)
+            = link_to admin_doc_resource_api_path(@doc, @resource, api), :class => "btn btn-mini btn-danger", :method => :delete, :confirm => "confirm delete?" do
+              %i.icon-white.icon-remove
+              Delete

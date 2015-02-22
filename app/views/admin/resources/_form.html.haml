@@ -1,0 +1,9 @@
+- resource = form.object
+.form-inputs
+  = form.input :name, :placeholder => "Products"
+  = form.input :description
+  = form.input :sort, :hint => "Will be sorted from 1 to 999"
+.form-actions
+  = form.submit :class => "btn btn-primary"
+  = link_to "Cancel", request.env["HTTP_REFERER"] || admin_doc_resources_path(resource.doc), :class => "btn"
+= hidden_input_redirect_to

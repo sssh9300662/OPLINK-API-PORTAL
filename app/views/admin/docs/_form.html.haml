@@ -1,0 +1,15 @@
+.form-inputs
+  = form.input :name, :placeholder => "Page title"
+  = form.input :api_version, :placeholder => "1.1.2", :hint => "Your API version"
+  = form.input :request_path, :placeholder => "http://staging.api.exmaple.com", :hint => "URL for Try it out"
+  = form.input :api_key_name, :placeholder => "access_token", :hint => "API token key for Try it out"
+  = form.input :api_key, :placeholder => "1234", :hint => "API token for Try it out"
+  = form.input :caption, :hint => "Title text above description"
+  = form.input :description
+  = form.input :fqdn, :placeholder => "api.example.com", :hint => "Your foreign domain to link this API doc page"
+  - if current_user.owned?(form.object)
+    = form.input :user_ids, :as => :select, :input_html => { :class => :chosen, :multiple => :true }, :label => "Users for cooperation", :collection => current_user_friends_collection
+.form-actions
+  = form.submit :class => "btn btn-primary"
+  = link_to "Cancel", request.env["HTTP_REFERER"] || admin_docs_path, :class => "btn"
+= hidden_input_redirect_to

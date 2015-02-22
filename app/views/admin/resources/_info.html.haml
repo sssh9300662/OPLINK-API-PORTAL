@@ -1,0 +1,7 @@
+%h1
+  = resource.name
+  = link_to edit_admin_doc_resource_path(resource.doc, resource), :class => "btn btn-mini" do
+    %i.icon-pencil
+.doc_info
+  %ul
+    %li= "description: #{resource.description}" if resource.description.present?

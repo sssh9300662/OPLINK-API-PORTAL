@@ -1,0 +1,13 @@
+= form.link_to_add :properties, :class => "btn btn-mini", :data => { :target => "#form_property" } do
+  %i.icon-plus
+  Add Property
+#form_property
+  = form.fields_for :properties do |form_property|
+    .form-inline
+      = form_property.link_to_remove :class => "btn btn-mini" do
+        %i.icon-minus
+        Delete
+      = form_property.input_field :name, :placeholder => :name, :class => "input-small"
+      = form_property.input_field :description, :placeholder => :description, :class => "input-medium"
+      = render_data_type_form(form_property, @doc)
+      = form_property.input_field :allowable_values, :placeholder => "allow values", :class => "input-medium", :as => :string

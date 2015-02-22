@@ -1,0 +1,8 @@
+= render :partial => "admin/docs/info", :object => @doc, :as => :doc
+
+%h2= "Resources"
+
+= link_to_create "Create Resource", new_admin_doc_resource_path(@doc)
+
+= render :partial => "list", :object => @doc.resources, :as => :resources
+

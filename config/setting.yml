@@ -1,0 +1,21 @@
+defaults: &defaults
+  app_name: "OPLINK API Portal"
+  host: "swagger-rails.dev"    
+  multiple_hosts:
+    - "example.com"
+    - "example.tw"
+  facebook_app_id: "267188576687915"
+  facebook_secret: "84f72292e1f6b299f4a668f12ed1a7f2"
+  facebook_perms: 
+  admin_emails: 
+    - ""
+  google_analytics_key: ""
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

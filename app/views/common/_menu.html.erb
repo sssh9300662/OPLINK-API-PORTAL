@@ -1,0 +1,21 @@
+<div class="navbar navbar-fixed-top ">
+  <div class="navbar-inner top ">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <%= link_to(Setting.app_name, root_path , :class => "brand" )%>
+      <div class="nav-collapse">
+        <ul class="nav">
+          <li><%= link_to("Docs",admin_docs_path) %></li>
+        </ul>  
+        <%= render :partial => "common/user_nav"%>
+      </div>
+    </div>
+  </div>
+
+  <%= yield :submenu %>
+
+</div>

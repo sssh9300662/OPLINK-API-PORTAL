@@ -1,0 +1,3 @@
+%h1= "Edit Resource ##{@resource.name}"
+= simple_form_for @resource, :url => admin_doc_resource_path(@doc, @resource), :html => { :class => 'form-horizontal' } do |f|
+  = render :partial => 'form', :object => f

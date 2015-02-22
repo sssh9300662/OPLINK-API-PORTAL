@@ -1,0 +1,24 @@
+<ul class="nav pills pull-right">
+
+    <li>
+      <div class="social"></div>
+    </li>
+
+  <% if current_user %>    
+
+    <li class="dropdown">
+      <%= link_to "#" , :class => "dropdown-toggle", :data => { :toogle => "dropdown" } do %>
+        <%= current_user.email %>
+      <% end %>
+
+      <ul class="dropdown-menu">
+        <li><%= link_to("Logout",destroy_user_session_path, :method => :delete ) %></li>
+      </ul>
+    </li>
+
+<% else %>
+  <li> <%= link_to( "Login", new_user_session_path )  %> </li>   
+<% end %>
+
+
+</ul>

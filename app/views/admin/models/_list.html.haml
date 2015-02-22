@@ -1,0 +1,21 @@
+%table.table.table-hover
+  %thead
+    %tr
+      %th="#"
+      %th="name"
+      %th="description"
+      %th.last=""
+  %tbody
+    - models.each do |model|
+      %tr
+        %td= model.id
+        %td= model.name
+        %td= model.description
+        %td.last
+          = link_to edit_admin_doc_model_path(model.doc, model), :class => "btn btn-mini" do
+            %i.icon.icon-pencil
+            Edit
+          - if can?(:destroy, model)
+            = link_to admin_doc_model_path(model.doc, model), :class => "btn btn-mini btn-danger", :method => :delete, :confirm => "confirm delete?" do
+              %i.icon-white.icon-remove
+              Delete

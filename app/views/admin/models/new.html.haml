@@ -1,0 +1,3 @@
+%h1= "New Model"
+= simple_nested_form_for @model, :url => admin_doc_models_path(@doc), :html => { :class => 'form-horizontal' } do |f|
+  = render :partial => 'form', :object => f

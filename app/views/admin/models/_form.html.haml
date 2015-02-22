@@ -1,0 +1,12 @@
+- model = form.object
+.form-inputs
+  = form.input :name, :placeholder => "Product"
+  = form.input :description
+  .control-group
+    %label.control-label= "Properties"
+    .controls
+      = render :partial => "nested_properties", :object => form, :as => :form
+.form-actions
+  = form.submit :class => "btn btn-primary"
+  = link_to "Cancel", request.env["HTTP_REFERER"] || admin_doc_models_path(model.doc), :class => "btn"
+= hidden_input_redirect_to
