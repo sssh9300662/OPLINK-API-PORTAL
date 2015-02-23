@@ -2654,3 +2654,1177 @@ Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-02-21 00:07:00 
 Served asset /application.js - 304 Not Modified (23ms)
 Connecting to database specified by database.yml
 Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2015-02-22 22:56:06 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (16.7ms)
+Completed 500 Internal Server Error in 1745ms
+
+ActionView::Template::Error (couldn't find file 'twitter/bootstrap-responsive'
+  (in /home/sssh9300662/OPLINK-API-PORTAL/app/assets/stylesheets/application.css.scss:4)):
+    3: <head>
+    4:   <title>OPLINK API Portal</title>
+    5:   <%= csrf_meta_tag %>
+    6:   <%= stylesheet_link_tag "application" %>
+    7:   <%= yield :stylesheets %>
+    8: </head>
+    9: 
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__57449645738297168_70298517654440'
+
+
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.7ms)
+Connecting to database specified by database.yml
+  [1m[36m (72.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to DeviseCreateUsers (20121209153904)
+Migrating to CreateDocs (20121209161352)
+Migrating to CreateApis (20121210072420)
+Migrating to CreateOperations (20121210073709)
+Migrating to CreateParameters (20121210075341)
+Migrating to CreateResources (20121212041857)
+Migrating to AddColumnResourceIdToAdpis (20121212042821)
+Migrating to AddColumnDocIdToApis (20121212122829)
+Migrating to AddColumnSortToApis (20121212135122)
+Migrating to RemoveUslessColumnAndTable (20121212141257)
+Migrating to CreateErrorResponses (20121212162022)
+Migrating to CreateModels (20121212170052)
+Migrating to CreateProperties (20121212183302)
+Migrating to AddFqdnColumnsToDocs (20121213095736)
+Migrating to AddApiTestingColumnsToDocs (20121217031318)
+Migrating to AddColumnApiKeyNameToDocs (20121217032925)
+Migrating to AddColumnCaptionToDoc (20121223103619)
+Migrating to RemoveColumnBasePathInDocs (20130512145751)
+Migrating to ChangeColumnApiKeyNameInDocs (20130512170113)
+Migrating to CreateDocUsers (20130515144508)
+Migrating to AddColumnCooperatedUsersCountToDocs (20130515150121)
+Migrating to AddColumnCooperatedDocsCountToUsers (20130515150235)
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to DeviseCreateUsers (20121209153904)
+Migrating to CreateDocs (20121209161352)
+Migrating to CreateApis (20121210072420)
+Migrating to CreateOperations (20121210073709)
+Migrating to CreateParameters (20121210075341)
+Migrating to CreateResources (20121212041857)
+Migrating to AddColumnResourceIdToAdpis (20121212042821)
+Migrating to AddColumnDocIdToApis (20121212122829)
+Migrating to AddColumnSortToApis (20121212135122)
+Migrating to RemoveUslessColumnAndTable (20121212141257)
+Migrating to CreateErrorResponses (20121212162022)
+Migrating to CreateModels (20121212170052)
+Migrating to CreateProperties (20121212183302)
+Migrating to AddFqdnColumnsToDocs (20121213095736)
+Migrating to AddApiTestingColumnsToDocs (20121217031318)
+Migrating to AddColumnApiKeyNameToDocs (20121217032925)
+Migrating to AddColumnCaptionToDoc (20121223103619)
+Migrating to RemoveColumnBasePathInDocs (20130512145751)
+Migrating to ChangeColumnApiKeyNameInDocs (20130512170113)
+Migrating to CreateDocUsers (20130515144508)
+Migrating to AddColumnCooperatedUsersCountToDocs (20130515150121)
+Migrating to AddColumnCooperatedDocsCountToUsers (20130515150235)
+  [1m[35m (0.3ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2015-02-22 23:12:15 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 154ms
+
+ActionView::Template::Error (couldn't find file 'twitter/bootstrap-responsive'
+  (in /home/sssh9300662/OPLINK-API-PORTAL/app/assets/stylesheets/application.css.scss:4)):
+    3: <head>
+    4:   <title>OPLINK API Portal</title>
+    5:   <%= csrf_meta_tag %>
+    6:   <%= stylesheet_link_tag "application" %>
+    7:   <%= yield :stylesheets %>
+    8: </head>
+    9: 
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__1856199426809269512_70108163359520'
+
+
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.6ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2015-02-22 23:14:16 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 55ms
+
+ActionView::Template::Error (couldn't find file 'twitter/bootstrap-responsive'
+  (in /home/sssh9300662/OPLINK-API-PORTAL/app/assets/stylesheets/application.css.scss:4)):
+    3: <head>
+    4:   <title>OPLINK API Portal</title>
+    5:   <%= csrf_meta_tag %>
+    6:   <%= stylesheet_link_tag "application" %>
+    7:   <%= yield :stylesheets %>
+    8: </head>
+    9: 
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___555269991135453499_69898716594740'
+
+
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.3ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2015-02-22 23:20:13 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 49ms
+
+ActionView::Template::Error (couldn't find file 'twitter/bootstrap-responsive'
+  (in /home/sssh9300662/OPLINK-API-PORTAL/app/assets/stylesheets/application.css.scss:4)):
+    3: <head>
+    4:   <title>OPLINK API Portal</title>
+    5:   <%= csrf_meta_tag %>
+    6:   <%= stylesheet_link_tag "application" %>
+    7:   <%= yield :stylesheets %>
+    8: </head>
+    9: 
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__2932191628837098149_70187553146820'
+
+
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.2ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2015-02-22 23:53:06 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 107ms
+
+ActionView::Template::Error (couldn't find file 'bootstrap_and_overrides'
+  (in /home/sssh9300662/OPLINK-API-PORTAL/app/assets/stylesheets/application.css.scss:2)):
+    3: <head>
+    4:   <title>OPLINK API Portal</title>
+    5:   <%= csrf_meta_tag %>
+    6:   <%= stylesheet_link_tag "application" %>
+    7:   <%= yield :stylesheets %>
+    8: </head>
+    9: 
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__4256515880010965987_70278217220380'
+
+
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.6ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2015-02-22 23:53:10 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (couldn't find file 'bootstrap_and_overrides'
+  (in /home/sssh9300662/OPLINK-API-PORTAL/app/assets/stylesheets/application.css.scss:2)):
+    3: <head>
+    4:   <title>OPLINK API Portal</title>
+    5:   <%= csrf_meta_tag %>
+    6:   <%= stylesheet_link_tag "application" %>
+    7:   <%= yield :stylesheets %>
+    8: </head>
+    9: 
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__4256515880010965987_70278217220380'
+
+
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.6ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2015-02-22 23:59:49 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 87ms
+
+ActionView::Template::Error (couldn't find file 'twitter/bootstrap-responsive'
+  (in /home/sssh9300662/OPLINK-API-PORTAL/app/assets/stylesheets/application.css.scss:4)):
+    3: <head>
+    4:   <title>OPLINK API Portal</title>
+    5:   <%= csrf_meta_tag %>
+    6:   <%= stylesheet_link_tag "application" %>
+    7:   <%= yield :stylesheets %>
+    8: </head>
+    9: 
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__2998203252919655443_70088298809580'
+
+
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.8ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2015-02-23 00:03:36 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 89ms
+
+ActionView::Template::Error (Invalid CSS after " */": expected selector or at-rule, was "@media (min-wid..."
+  (in /home/sssh9300662/OPLINK-API-PORTAL/app/assets/stylesheets/application.css.scss)):
+    3: <head>
+    4:   <title>OPLINK API Portal</title>
+    5:   <%= csrf_meta_tag %>
+    6:   <%= stylesheet_link_tag "application" %>
+    7:   <%= yield :stylesheets %>
+    8: </head>
+    9: 
+  app/assets/stylesheets/application.css.scss:11
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__2006459212842668636_70020787619140'
+
+
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.1ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2015-02-23 00:05:49 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (4.7ms)
+Completed 500 Internal Server Error in 62ms
+
+ActionView::Template::Error (Invalid CSS after " */": expected selector or at-rule, was "@media (min-wid..."
+  (in /home/sssh9300662/OPLINK-API-PORTAL/app/assets/stylesheets/application.css.scss)):
+    3: <head>
+    4:   <title>OPLINK API Portal</title>
+    5:   <%= csrf_meta_tag %>
+    6:   <%= stylesheet_link_tag "application" %>
+    7:   <%= yield :stylesheets %>
+    8: </head>
+    9: 
+  app/assets/stylesheets/application.css.scss:11
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__3453371800577629898_70306637838440'
+
+
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.6ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2015-02-23 00:07:23 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 50ms
+
+ActionView::Template::Error (couldn't find file 'twitter/bootstrap-responsive'
+  (in /home/sssh9300662/OPLINK-API-PORTAL/app/assets/stylesheets/application.css.scss:5)):
+    3: <head>
+    4:   <title>OPLINK API Portal</title>
+    5:   <%= csrf_meta_tag %>
+    6:   <%= stylesheet_link_tag "application" %>
+    7:   <%= yield :stylesheets %>
+    8: </head>
+    9: 
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__2154253687684202999_70211141935000'
+
+
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.5ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2015-02-23 00:09:03 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 43ms
+
+ActionView::Template::Error (couldn't find file 'twitter/bootstrap-responsive'
+  (in /home/sssh9300662/OPLINK-API-PORTAL/app/assets/stylesheets/application.css.scss:5)):
+    3: <head>
+    4:   <title>OPLINK API Portal</title>
+    5:   <%= csrf_meta_tag %>
+    6:   <%= stylesheet_link_tag "application" %>
+    7:   <%= yield :stylesheets %>
+    8: </head>
+    9: 
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___1525853502348904025_69881100531120'
+
+
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.7ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2015-02-23 00:14:40 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 45ms
+
+ActionView::Template::Error (couldn't find file 'twitter/bootstrap-responsive'
+  (in /home/sssh9300662/OPLINK-API-PORTAL/app/assets/stylesheets/application.css.scss:5)):
+    3: <head>
+    4:   <title>OPLINK API Portal</title>
+    5:   <%= csrf_meta_tag %>
+    6:   <%= stylesheet_link_tag "application" %>
+    7:   <%= yield :stylesheets %>
+    8: </head>
+    9: 
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__1663670356864038620_70280096732900'
+
+
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.2ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2015-02-23 00:37:03 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 46ms
+
+ActionView::Template::Error (Invalid CSS after "...ort "bootstrap"": expected selector or at-rule, was "@media (min-wid..."
+  (in /home/sssh9300662/OPLINK-API-PORTAL/app/assets/stylesheets/application.css.scss)):
+    3: <head>
+    4:   <title>OPLINK API Portal</title>
+    5:   <%= csrf_meta_tag %>
+    6:   <%= stylesheet_link_tag "application" %>
+    7:   <%= yield :stylesheets %>
+    8: </head>
+    9: 
+  app/assets/stylesheets/application.css.scss:11
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___1624987243078615132_70254594916180'
+
+
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.2ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2015-02-23 00:38:51 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (1.6ms)
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/c2da531a5da964cb61af5fd4c8dbb43a0d4faf8e/application.css.scssc: can't dump anonymous class #<Class:0x000000038587b8>
+
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/c2da531a5da964cb61af5fd4c8dbb43a0d4faf8e/bootstrap-setting.css.scssc: can't dump anonymous class #<Class:0x000000038587b8>
+
+Compiled bootstrap-setting.css  (2ms)  (pid 5158)
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/acddc34eaab1f8a145ff7c0115bc3fa90189ee3f/bootstrap.scssc: can't dump anonymous class #<Class:0x000000038587b8>
+
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/c3a24a5dfc97f55c5fa8e227e91bb1e86bb818dd/_bootstrap.scssc: can't dump anonymous class #<Class:0x000000038587b8>
+
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/c3a24a5dfc97f55c5fa8e227e91bb1e86bb818dd/_variables.scssc: can't dump anonymous class #<Class:0x000000038587b8>
+
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/c3a24a5dfc97f55c5fa8e227e91bb1e86bb818dd/_mixins.scssc: can't dump anonymous class #<Class:0x000000038587b8>
+
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/c3a24a5dfc97f55c5fa8e227e91bb1e86bb818dd/_normalize.scssc: can't dump anonymous class #<Class:0x000000038587b8>
+
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/c3a24a5dfc97f55c5fa8e227e91bb1e86bb818dd/_print.scssc: can't dump anonymous class #<Class:0x000000038587b8>
+
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/c3a24a5dfc97f55c5fa8e227e91bb1e86bb818dd/_scaffolding.scssc: can't dump anonymous class #<Class:0x000000038587b8>
+
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/c3a24a5dfc97f55c5fa8e227e91bb1e86bb818dd/_type.scssc: can't dump anonymous class #<Class:0x000000038587b8>
+
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/c3a24a5dfc97f55c5fa8e227e91bb1e86bb818dd/_code.scssc: can't dump anonymous class #<Class:0x000000038587b8>
+
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/c3a24a5dfc97f55c5fa8e227e91bb1e86bb818dd/_grid.scssc: can't dump anonymous class #<Class:0x000000038587b8>
+
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/c3a24a5dfc97f55c5fa8e227e91bb1e86bb818dd/_tables.scssc: can't dump anonymous class #<Class:0x000000038587b8>
+
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/c3a24a5dfc97f55c5fa8e227e91bb1e86bb818dd/_forms.scssc: can't dump anonymous class #<Class:0x000000038587b8>
+
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/c3a24a5dfc97f55c5fa8e227e91bb1e86bb818dd/_buttons.scssc: can't dump anonymous class #<Class:0x000000038587b8>
+
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/c3a24a5dfc97f55c5fa8e227e91bb1e86bb818dd/_component-animations.scssc: can't dump anonymous class #<Class:0x000000038587b8>
+
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/c3a24a5dfc97f55c5fa8e227e91bb1e86bb818dd/_glyphicons.scssc: can't dump anonymous class #<Class:0x000000038587b8>
+
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/c3a24a5dfc97f55c5fa8e227e91bb1e86bb818dd/_dropdowns.scssc: can't dump anonymous class #<Class:0x000000038587b8>
+
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/c3a24a5dfc97f55c5fa8e227e91bb1e86bb818dd/_button-groups.scssc: can't dump anonymous class #<Class:0x000000038587b8>
+
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/c3a24a5dfc97f55c5fa8e227e91bb1e86bb818dd/_input-groups.scssc: can't dump anonymous class #<Class:0x000000038587b8>
+
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/c3a24a5dfc97f55c5fa8e227e91bb1e86bb818dd/_navs.scssc: can't dump anonymous class #<Class:0x000000038587b8>
+
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/c3a24a5dfc97f55c5fa8e227e91bb1e86bb818dd/_navbar.scssc: can't dump anonymous class #<Class:0x000000038587b8>
+
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/c3a24a5dfc97f55c5fa8e227e91bb1e86bb818dd/_breadcrumbs.scssc: can't dump anonymous class #<Class:0x000000038587b8>
+
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/c3a24a5dfc97f55c5fa8e227e91bb1e86bb818dd/_pagination.scssc: can't dump anonymous class #<Class:0x000000038587b8>
+
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/c3a24a5dfc97f55c5fa8e227e91bb1e86bb818dd/_pager.scssc: can't dump anonymous class #<Class:0x000000038587b8>
+
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/c3a24a5dfc97f55c5fa8e227e91bb1e86bb818dd/_labels.scssc: can't dump anonymous class #<Class:0x000000038587b8>
+
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/c3a24a5dfc97f55c5fa8e227e91bb1e86bb818dd/_badges.scssc: can't dump anonymous class #<Class:0x000000038587b8>
+
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/c3a24a5dfc97f55c5fa8e227e91bb1e86bb818dd/_jumbotron.scssc: can't dump anonymous class #<Class:0x000000038587b8>
+
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/c3a24a5dfc97f55c5fa8e227e91bb1e86bb818dd/_thumbnails.scssc: can't dump anonymous class #<Class:0x000000038587b8>
+
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/c3a24a5dfc97f55c5fa8e227e91bb1e86bb818dd/_alerts.scssc: can't dump anonymous class #<Class:0x000000038587b8>
+
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/c3a24a5dfc97f55c5fa8e227e91bb1e86bb818dd/_progress-bars.scssc: can't dump anonymous class #<Class:0x000000038587b8>
+
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/c3a24a5dfc97f55c5fa8e227e91bb1e86bb818dd/_media.scssc: can't dump anonymous class #<Class:0x000000038587b8>
+
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/c3a24a5dfc97f55c5fa8e227e91bb1e86bb818dd/_list-group.scssc: can't dump anonymous class #<Class:0x000000038587b8>
+
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/c3a24a5dfc97f55c5fa8e227e91bb1e86bb818dd/_panels.scssc: can't dump anonymous class #<Class:0x000000038587b8>
+
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/c3a24a5dfc97f55c5fa8e227e91bb1e86bb818dd/_wells.scssc: can't dump anonymous class #<Class:0x000000038587b8>
+
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/c3a24a5dfc97f55c5fa8e227e91bb1e86bb818dd/_close.scssc: can't dump anonymous class #<Class:0x000000038587b8>
+
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/c3a24a5dfc97f55c5fa8e227e91bb1e86bb818dd/_modals.scssc: can't dump anonymous class #<Class:0x000000038587b8>
+
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/c3a24a5dfc97f55c5fa8e227e91bb1e86bb818dd/_tooltip.scssc: can't dump anonymous class #<Class:0x000000038587b8>
+
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/c3a24a5dfc97f55c5fa8e227e91bb1e86bb818dd/_popovers.scssc: can't dump anonymous class #<Class:0x000000038587b8>
+
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/c3a24a5dfc97f55c5fa8e227e91bb1e86bb818dd/_carousel.scssc: can't dump anonymous class #<Class:0x000000038587b8>
+
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/c3a24a5dfc97f55c5fa8e227e91bb1e86bb818dd/_utilities.scssc: can't dump anonymous class #<Class:0x000000038587b8>
+
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/c3a24a5dfc97f55c5fa8e227e91bb1e86bb818dd/_responsive-utilities.scssc: can't dump anonymous class #<Class:0x000000038587b8>
+
+Compiled twitter/bootstrap.css  (2233ms)  (pid 5158)
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/c2da531a5da964cb61af5fd4c8dbb43a0d4faf8e/bootstrap-override.css.scssc: can't dump anonymous class #<Class:0x000000038587b8>
+
+Compiled bootstrap-override.css  (3ms)  (pid 5158)
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/f625c1ccb5b881acc110b12df6966f0eae154861/chosen.css.sassc: can't dump anonymous class #<Class:0x000000038587b8>
+
+Compiled chosen.css  (173ms)  (pid 5158)
+Compiled application.css  (2587ms)  (pid 5158)
+  Rendered common/_user_nav.html.erb (1.1ms)
+  Rendered common/_menu.html.erb (3.4ms)
+  Rendered common/_footer.html.erb (0.3ms)
+  Rendered common/_bootstrap_modal.html.erb (0.3ms)
+Compiled jquery.js  (3ms)  (pid 5158)
+Compiled jquery_ujs.js  (0ms)  (pid 5158)
+Compiled twitter/bootstrap/transition.js  (0ms)  (pid 5158)
+Compiled twitter/bootstrap/alert.js  (0ms)  (pid 5158)
+Compiled twitter/bootstrap/button.js  (0ms)  (pid 5158)
+Compiled twitter/bootstrap/carousel.js  (0ms)  (pid 5158)
+Compiled twitter/bootstrap/collapse.js  (0ms)  (pid 5158)
+Compiled twitter/bootstrap/dropdown.js  (0ms)  (pid 5158)
+Compiled twitter/bootstrap/modal.js  (0ms)  (pid 5158)
+Compiled twitter/bootstrap/tooltip.js  (0ms)  (pid 5158)
+Compiled twitter/bootstrap/popover.js  (0ms)  (pid 5158)
+Compiled twitter/bootstrap/scrollspy.js  (0ms)  (pid 5158)
+Compiled twitter/bootstrap/tab.js  (0ms)  (pid 5158)
+Compiled twitter/bootstrap/affix.js  (0ms)  (pid 5158)
+Compiled twitter/bootstrap.js  (118ms)  (pid 5158)
+Compiled jquery_nested_form.js  (0ms)  (pid 5158)
+Compiled lib/abstract-chosen.js  (295ms)  (pid 5158)
+Compiled lib/select-parser.js  (21ms)  (pid 5158)
+Compiled chosen.jquery.js  (229ms)  (pid 5158)
+Compiled chosen-jquery.js  (819ms)  (pid 5158)
+Compiled application.js  (1034ms)  (pid 5158)
+Completed 200 OK in 3843ms (Views: 3819.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 10.0.2.2 at 2015-02-23 00:38:56 +0800
+Served asset /twitter/bootstrap.css - 200 OK (158ms)
+
+
+Started GET "/assets/bootstrap-setting.css?body=1" for 10.0.2.2 at 2015-02-23 00:38:56 +0800
+Served asset /bootstrap-setting.css - 200 OK (15ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-02-23 00:38:56 +0800
+Served asset /application.css - 200 OK (20ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-02-23 00:38:56 +0800
+Served asset /jquery.js - 200 OK (5ms)
+
+
+Started GET "/assets/bootstrap-override.css?body=1" for 10.0.2.2 at 2015-02-23 00:38:56 +0800
+Served asset /bootstrap-override.css - 200 OK (1ms)
+
+
+Started GET "/assets/chosen.css?body=1" for 10.0.2.2 at 2015-02-23 00:38:56 +0800
+Served asset /chosen.css - 200 OK (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 10.0.2.2 at 2015-02-23 00:38:56 +0800
+Served asset /twitter/bootstrap/alert.js - 200 OK (5ms)
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 10.0.2.2 at 2015-02-23 00:38:56 +0800
+Served asset /twitter/bootstrap/transition.js - 200 OK (17ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-02-23 00:38:56 +0800
+Served asset /jquery_ujs.js - 200 OK (6ms)
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 10.0.2.2 at 2015-02-23 00:38:56 +0800
+Served asset /twitter/bootstrap/carousel.js - 200 OK (7ms)
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 10.0.2.2 at 2015-02-23 00:38:57 +0800
+Served asset /twitter/bootstrap/button.js - 200 OK (10ms)
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 10.0.2.2 at 2015-02-23 00:38:57 +0800
+Served asset /twitter/bootstrap/collapse.js - 200 OK (5ms)
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 10.0.2.2 at 2015-02-23 00:38:57 +0800
+Served asset /twitter/bootstrap/modal.js - 200 OK (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 10.0.2.2 at 2015-02-23 00:38:57 +0800
+Served asset /twitter/bootstrap/tooltip.js - 200 OK (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 10.0.2.2 at 2015-02-23 00:38:57 +0800
+Served asset /twitter/bootstrap/dropdown.js - 200 OK (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 10.0.2.2 at 2015-02-23 00:38:57 +0800
+Served asset /twitter/bootstrap/scrollspy.js - 200 OK (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 10.0.2.2 at 2015-02-23 00:38:57 +0800
+Served asset /twitter/bootstrap/affix.js - 200 OK (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 10.0.2.2 at 2015-02-23 00:38:57 +0800
+Served asset /twitter/bootstrap/tab.js - 200 OK (3ms)
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 10.0.2.2 at 2015-02-23 00:38:57 +0800
+Served asset /jquery_nested_form.js - 200 OK (3ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 10.0.2.2 at 2015-02-23 00:38:57 +0800
+Served asset /twitter/bootstrap.js - 200 OK (13ms)
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 10.0.2.2 at 2015-02-23 00:38:57 +0800
+Served asset /twitter/bootstrap/popover.js - 200 OK (3ms)
+
+
+Started GET "/assets/chosen.jquery.js?body=1" for 10.0.2.2 at 2015-02-23 00:38:57 +0800
+Served asset /chosen.jquery.js - 200 OK (3ms)
+
+
+Started GET "/assets/lib/select-parser.js?body=1" for 10.0.2.2 at 2015-02-23 00:38:57 +0800
+Served asset /lib/select-parser.js - 200 OK (2ms)
+
+
+Started GET "/assets/lib/abstract-chosen.js?body=1" for 10.0.2.2 at 2015-02-23 00:38:57 +0800
+Served asset /lib/abstract-chosen.js - 200 OK (3ms)
+
+
+Started GET "/assets/chosen-jquery.js?body=1" for 10.0.2.2 at 2015-02-23 00:38:57 +0800
+Served asset /chosen-jquery.js - 200 OK (6ms)
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-02-23 00:38:57 +0800
+Served asset /application.js - 200 OK (42ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2015-02-23 00:42:06 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 265ms
+
+ActionView::Template::Error (couldn't find file 'twitter/bootstrap-responsive'
+  (in /home/sssh9300662/OPLINK-API-PORTAL/app/assets/stylesheets/application.css.scss:4)):
+    3: <head>
+    4:   <title>OPLINK API Portal</title>
+    5:   <%= csrf_meta_tag %>
+    6:   <%= stylesheet_link_tag "application" %>
+    7:   <%= yield :stylesheets %>
+    8: </head>
+    9: 
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___2537574970023893769_69847780975040'
+
+
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.8ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2015-02-23 00:51:41 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 84ms
+
+ActionView::Template::Error (couldn't find file 'twitter/bootstrap-responsive'
+  (in /home/sssh9300662/OPLINK-API-PORTAL/app/assets/stylesheets/application.css.scss:4)):
+    3: <head>
+    4:   <title>OPLINK API Portal</title>
+    5:   <%= csrf_meta_tag %>
+    6:   <%= stylesheet_link_tag "application" %>
+    7:   <%= yield :stylesheets %>
+    8: </head>
+    9: 
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__4332464722577378582_24804620'
+
+
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.9ms)
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.8ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2015-02-23 00:51:44 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (0.2ms)
+Completed 500 Internal Server Error in 23ms
+
+ActionView::Template::Error (couldn't find file 'twitter/bootstrap-responsive'
+  (in /home/sssh9300662/OPLINK-API-PORTAL/app/assets/stylesheets/application.css.scss:4)):
+    3: <head>
+    4:   <title>OPLINK API Portal</title>
+    5:   <%= csrf_meta_tag %>
+    6:   <%= stylesheet_link_tag "application" %>
+    7:   <%= yield :stylesheets %>
+    8: </head>
+    9: 
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__4332464722577378582_24804620'
+
+
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.3ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2015-02-23 01:05:44 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (17.9ms)
+Completed 500 Internal Server Error in 272ms
+
+ActionView::Template::Error (couldn't find file 'twitter/bootstrap-responsive'
+  (in /home/sssh9300662/OPLINK-API-PORTAL/app/assets/stylesheets/application.css.scss:4)):
+    3: <head>
+    4:   <title>OPLINK API Portal</title>
+    5:   <%= csrf_meta_tag %>
+    6:   <%= stylesheet_link_tag "application" %>
+    7:   <%= yield :stylesheets %>
+    8: </head>
+    9: 
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__3275176091616696021_70054040061780'
+
+
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.9ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2015-02-23 01:07:47 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 111ms
+
+ActionView::Template::Error (couldn't find file 'twitter/bootstrap-responsive'
+  (in /home/sssh9300662/OPLINK-API-PORTAL/app/assets/stylesheets/application.css.scss:4)):
+    3: <head>
+    4:   <title>OPLINK API Portal</title>
+    5:   <%= csrf_meta_tag %>
+    6:   <%= stylesheet_link_tag "application" %>
+    7:   <%= yield :stylesheets %>
+    8: </head>
+    9: 
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___490187362210873294_70345460303040'
+
+
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.1ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2015-02-23 01:10:19 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (2.0ms)
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/c2da531a5da964cb61af5fd4c8dbb43a0d4faf8e/application.css.scssc: can't dump anonymous class #<Class:0x00000002d67e80>
+
+Compiled application.css  (35ms)  (pid 5456)
+  Rendered common/_user_nav.html.erb (1.0ms)
+  Rendered common/_menu.html.erb (2.7ms)
+  Rendered common/_footer.html.erb (0.4ms)
+  Rendered common/_bootstrap_modal.html.erb (0.8ms)
+Completed 200 OK in 505ms (Views: 479.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/bootstrap-setting.css?body=1" for 10.0.2.2 at 2015-02-23 01:10:20 +0800
+Served asset /bootstrap-setting.css - 200 OK (1ms)
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 10.0.2.2 at 2015-02-23 01:10:20 +0800
+Served asset /twitter/bootstrap.css - 200 OK (16ms)
+
+
+Started GET "/assets/bootstrap-override.css?body=1" for 10.0.2.2 at 2015-02-23 01:10:20 +0800
+Served asset /bootstrap-override.css - 200 OK (2ms)
+
+
+Started GET "/assets/chosen.css?body=1" for 10.0.2.2 at 2015-02-23 01:10:20 +0800
+Served asset /chosen.css - 200 OK (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-02-23 01:10:20 +0800
+Served asset /application.css - 200 OK (13ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-02-23 01:10:20 +0800
+Served asset /jquery.js - 200 OK (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-02-23 01:10:20 +0800
+Served asset /jquery_ujs.js - 200 OK (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 10.0.2.2 at 2015-02-23 01:10:21 +0800
+Served asset /twitter/bootstrap/transition.js - 200 OK (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 10.0.2.2 at 2015-02-23 01:10:21 +0800
+Served asset /twitter/bootstrap/alert.js - 200 OK (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 10.0.2.2 at 2015-02-23 01:10:21 +0800
+Served asset /twitter/bootstrap/button.js - 200 OK (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 10.0.2.2 at 2015-02-23 01:10:21 +0800
+Served asset /twitter/bootstrap/collapse.js - 200 OK (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 10.0.2.2 at 2015-02-23 01:10:21 +0800
+Served asset /twitter/bootstrap/dropdown.js - 200 OK (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 10.0.2.2 at 2015-02-23 01:10:21 +0800
+Served asset /twitter/bootstrap/carousel.js - 200 OK (6ms)
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 10.0.2.2 at 2015-02-23 01:10:21 +0800
+Served asset /twitter/bootstrap/modal.js - 200 OK (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 10.0.2.2 at 2015-02-23 01:10:22 +0800
+Served asset /twitter/bootstrap/popover.js - 200 OK (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 10.0.2.2 at 2015-02-23 01:10:22 +0800
+Served asset /twitter/bootstrap/scrollspy.js - 200 OK (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 10.0.2.2 at 2015-02-23 01:10:22 +0800
+Served asset /twitter/bootstrap/tooltip.js - 200 OK (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 10.0.2.2 at 2015-02-23 01:10:22 +0800
+Served asset /twitter/bootstrap/tab.js - 200 OK (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 10.0.2.2 at 2015-02-23 01:10:22 +0800
+Served asset /twitter/bootstrap/affix.js - 200 OK (3ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 10.0.2.2 at 2015-02-23 01:10:22 +0800
+Served asset /twitter/bootstrap.js - 200 OK (22ms)
+
+
+Started GET "/assets/lib/select-parser.js?body=1" for 10.0.2.2 at 2015-02-23 01:10:22 +0800
+Served asset /lib/select-parser.js - 200 OK (1ms)
+
+
+Started GET "/assets/lib/abstract-chosen.js?body=1" for 10.0.2.2 at 2015-02-23 01:10:22 +0800
+Served asset /lib/abstract-chosen.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 10.0.2.2 at 2015-02-23 01:10:22 +0800
+Served asset /jquery_nested_form.js - 200 OK (2ms)
+
+
+Started GET "/assets/chosen-jquery.js?body=1" for 10.0.2.2 at 2015-02-23 01:10:22 +0800
+Served asset /chosen-jquery.js - 200 OK (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-02-23 01:10:22 +0800
+Served asset /application.js - 200 OK (27ms)
+
+
+Started GET "/assets/chosen.jquery.js?body=1" for 10.0.2.2 at 2015-02-23 01:10:22 +0800
+Served asset /chosen.jquery.js - 200 OK (2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2015-02-23 01:10:29 +0800
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in ForeignDomain::Base instead. (called from include at /home/sssh9300662/OPLINK-API-PORTAL/app/controllers/docs_controller.rb:3)
+Processing by DocsController#show as HTML
+  [1m[36mDoc Load (223.7ms)[0m  [1mSELECT `docs`.* FROM `docs` WHERE `docs`.`fqdn` = '169.254.141.246' LIMIT 1[0m
+  [1m[35mDoc Load (0.4ms)[0m  SELECT `docs`.* FROM `docs` WHERE `docs`.`fqdn` = '169.254.141.246:3000' LIMIT 1
+  [1m[36mDoc Load (0.9ms)[0m  [1mSELECT `docs`.* FROM `docs` WHERE `docs`.`subdomain` IS NULL LIMIT 1[0m
+  Rendered text template (0.0ms)
+Filter chain halted as :get_doc_by_request rendered or redirected
+Completed 500 Internal Server Error in 319ms (Views: 21.0ms | ActiveRecord: 225.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-02-23 01:11:15 +0800
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/bootstrap.css" for 10.0.2.2 at 2015-02-23 01:13:35 +0800
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in ActsAsSortable instead. (called from include at /home/sssh9300662/OPLINK-API-PORTAL/app/models/resource.rb:7)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in ForeignDomain::Base instead. (called from include at /home/sssh9300662/OPLINK-API-PORTAL/app/controllers/resources_controller.rb:3)
+Processing by ResourcesController#show as CSS
+  Parameters: {"name"=>"bootstrap"}
+  [1m[35mDoc Load (0.4ms)[0m  SELECT `docs`.* FROM `docs` WHERE `docs`.`fqdn` = '169.254.141.246' LIMIT 1
+  [1m[36mDoc Load (0.5ms)[0m  [1mSELECT `docs`.* FROM `docs` WHERE `docs`.`fqdn` = '169.254.141.246:3000' LIMIT 1[0m
+  [1m[35mDoc Load (0.2ms)[0m  SELECT `docs`.* FROM `docs` WHERE `docs`.`subdomain` IS NULL LIMIT 1
+  Rendered text template (0.0ms)
+Filter chain halted as :get_doc_by_request rendered or redirected
+Completed 500 Internal Server Error in 4ms (Views: 0.4ms | ActiveRecord: 1.0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2015-02-23 01:28:52 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 60ms
+
+ActionView::Template::Error (couldn't find file 'twitter/bootstrap/responsive-utilities'
+  (in /home/sssh9300662/OPLINK-API-PORTAL/app/assets/stylesheets/application.css.scss:4)):
+    3: <head>
+    4:   <title>OPLINK API Portal</title>
+    5:   <%= csrf_meta_tag %>
+    6:   <%= stylesheet_link_tag "application" %>
+    7:   <%= yield :stylesheets %>
+    8: </head>
+    9: 
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__840533238933780395_70082695554500'
+
+
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/sssh9300662/.rvm/gems/ruby-2.1.5/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.9ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2015-02-23 01:33:53 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (1.4ms)
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/c2da531a5da964cb61af5fd4c8dbb43a0d4faf8e/application.css.scssc: can't dump anonymous class #<Class:0x000000034b48c8>
+
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/181645603ea7905680e97224a802fd142640cba9/bootstrap.scssc: can't dump anonymous class #<Class:0x000000034b48c8>
+
+Compiled twitter/bootstrap.css  (1663ms)  (pid 5905)
+Warning. Error encountered while saving cache /home/sssh9300662/OPLINK-API-PORTAL/tmp/cache/sass/181645603ea7905680e97224a802fd142640cba9/bootstrap-responsive.scssc: can't dump anonymous class #<Class:0x000000034b48c8>
+
+Compiled twitter/bootstrap-responsive.css  (274ms)  (pid 5905)
+Compiled application.css  (2150ms)  (pid 5905)
+  Rendered common/_user_nav.html.erb (1.1ms)
+  Rendered common/_menu.html.erb (2.9ms)
+  Rendered common/_footer.html.erb (0.4ms)
+  Rendered common/_bootstrap_modal.html.erb (0.3ms)
+Compiled twitter/bootstrap/transition.js  (0ms)  (pid 5905)
+Compiled twitter/bootstrap/dropdown.js  (0ms)  (pid 5905)
+Compiled twitter/bootstrap/button.js  (0ms)  (pid 5905)
+Compiled twitter/bootstrap/carousel.js  (0ms)  (pid 5905)
+Compiled twitter/bootstrap/collapse.js  (0ms)  (pid 5905)
+Compiled twitter/bootstrap/alert.js  (0ms)  (pid 5905)
+Compiled twitter/bootstrap/affix.js  (0ms)  (pid 5905)
+Compiled twitter/bootstrap/typeahead.js  (0ms)  (pid 5905)
+Compiled twitter/bootstrap/scrollspy.js  (0ms)  (pid 5905)
+Compiled twitter/bootstrap/tab.js  (0ms)  (pid 5905)
+Compiled twitter/bootstrap/modal.js  (0ms)  (pid 5905)
+Compiled twitter/bootstrap/tooltip.js  (0ms)  (pid 5905)
+Compiled twitter/bootstrap/popover.js  (0ms)  (pid 5905)
+Compiled twitter/bootstrap.js  (228ms)  (pid 5905)
+Compiled application.js  (323ms)  (pid 5905)
+Completed 200 OK in 2718ms (Views: 2691.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/twitter/bootstrap-responsive.css?body=1" for 10.0.2.2 at 2015-02-23 01:33:56 +0800
+Served asset /twitter/bootstrap-responsive.css - 200 OK (4ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-02-23 01:33:56 +0800
+Served asset /application.css - 200 OK (8ms)
+
+
+Started GET "/assets/twitter/bootstrap/typeahead.js?body=1" for 10.0.2.2 at 2015-02-23 01:33:56 +0800
+Served asset /twitter/bootstrap/typeahead.js - 200 OK (7ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2015-02-23 01:34:15 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (1.0ms)
+  Rendered common/_user_nav.html.erb (0.4ms)
+  Rendered common/_menu.html.erb (1.4ms)
+  Rendered common/_footer.html.erb (0.1ms)
+  Rendered common/_bootstrap_modal.html.erb (0.0ms)
+Completed 200 OK in 52ms (Views: 51.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-02-23 01:34:15 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2015-02-23 01:34:30 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (0.3ms)
+  Rendered common/_user_nav.html.erb (0.4ms)
+  Rendered common/_menu.html.erb (1.3ms)
+  Rendered common/_footer.html.erb (0.2ms)
+  Rendered common/_bootstrap_modal.html.erb (0.1ms)
+Completed 200 OK in 53ms (Views: 52.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-setting.css?body=1" for 10.0.2.2 at 2015-02-23 01:34:30 +0800
+Served asset /bootstrap-setting.css - 200 OK (1ms)
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 10.0.2.2 at 2015-02-23 01:34:30 +0800
+Served asset /twitter/bootstrap.css - 200 OK (2ms)
+
+
+Started GET "/assets/twitter/bootstrap-responsive.css?body=1" for 10.0.2.2 at 2015-02-23 01:34:30 +0800
+Served asset /twitter/bootstrap-responsive.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-override.css?body=1" for 10.0.2.2 at 2015-02-23 01:34:30 +0800
+Served asset /bootstrap-override.css - 200 OK (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-02-23 01:34:30 +0800
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/chosen.css?body=1" for 10.0.2.2 at 2015-02-23 01:34:30 +0800
+Served asset /chosen.css - 200 OK (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-02-23 01:34:30 +0800
+Served asset /jquery.js - 200 OK (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-02-23 01:34:31 +0800
+Served asset /jquery_ujs.js - 200 OK (15ms)
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 10.0.2.2 at 2015-02-23 01:34:31 +0800
+Served asset /twitter/bootstrap/dropdown.js - 200 OK (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 10.0.2.2 at 2015-02-23 01:34:31 +0800
+Served asset /twitter/bootstrap/transition.js - 200 OK (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 10.0.2.2 at 2015-02-23 01:34:31 +0800
+Served asset /twitter/bootstrap/collapse.js - 200 OK (5ms)
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 10.0.2.2 at 2015-02-23 01:34:31 +0800
+Served asset /twitter/bootstrap/button.js - 200 OK (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 10.0.2.2 at 2015-02-23 01:34:31 +0800
+Served asset /twitter/bootstrap/alert.js - 200 OK (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 10.0.2.2 at 2015-02-23 01:34:31 +0800
+Served asset /twitter/bootstrap/affix.js - 200 OK (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 10.0.2.2 at 2015-02-23 01:34:31 +0800
+Served asset /twitter/bootstrap/carousel.js - 200 OK (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/typeahead.js?body=1" for 10.0.2.2 at 2015-02-23 01:34:31 +0800
+Served asset /twitter/bootstrap/typeahead.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 10.0.2.2 at 2015-02-23 01:34:31 +0800
+Served asset /twitter/bootstrap/scrollspy.js - 200 OK (9ms)
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 10.0.2.2 at 2015-02-23 01:34:31 +0800
+Served asset /twitter/bootstrap/tab.js - 200 OK (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 10.0.2.2 at 2015-02-23 01:34:31 +0800
+Served asset /twitter/bootstrap/modal.js - 200 OK (5ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 10.0.2.2 at 2015-02-23 01:34:31 +0800
+Served asset /twitter/bootstrap.js - 200 OK (20ms)
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 10.0.2.2 at 2015-02-23 01:34:31 +0800
+Served asset /twitter/bootstrap/popover.js - 200 OK (6ms)
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 10.0.2.2 at 2015-02-23 01:34:31 +0800
+Served asset /jquery_nested_form.js - 200 OK (2ms)
+
+
+Started GET "/assets/lib/abstract-chosen.js?body=1" for 10.0.2.2 at 2015-02-23 01:34:31 +0800
+Served asset /lib/abstract-chosen.js - 200 OK (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 10.0.2.2 at 2015-02-23 01:34:31 +0800
+Served asset /twitter/bootstrap/tooltip.js - 200 OK (2ms)
+
+
+Started GET "/assets/lib/select-parser.js?body=1" for 10.0.2.2 at 2015-02-23 01:34:31 +0800
+Served asset /lib/select-parser.js - 200 OK (2ms)
+
+
+Started GET "/assets/chosen.jquery.js?body=1" for 10.0.2.2 at 2015-02-23 01:34:31 +0800
+Served asset /chosen.jquery.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-02-23 01:34:31 +0800
+Served asset /application.js - 200 OK (50ms)
+
+
+Started GET "/assets/chosen-jquery.js?body=1" for 10.0.2.2 at 2015-02-23 01:34:31 +0800
+Served asset /chosen-jquery.js - 200 OK (22ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2015-02-23 01:34:51 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (0.2ms)
+  Rendered common/_user_nav.html.erb (0.3ms)
+  Rendered common/_menu.html.erb (1.2ms)
+  Rendered common/_footer.html.erb (0.0ms)
+  Rendered common/_bootstrap_modal.html.erb (0.0ms)
+Completed 200 OK in 48ms (Views: 47.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-setting.css?body=1" for 10.0.2.2 at 2015-02-23 01:34:51 +0800
+Served asset /bootstrap-setting.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 10.0.2.2 at 2015-02-23 01:34:51 +0800
+Served asset /twitter/bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap-responsive.css?body=1" for 10.0.2.2 at 2015-02-23 01:34:51 +0800
+Served asset /twitter/bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-02-23 01:34:51 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-override.css?body=1" for 10.0.2.2 at 2015-02-23 01:34:51 +0800
+Served asset /bootstrap-override.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/chosen.css?body=1" for 10.0.2.2 at 2015-02-23 01:34:51 +0800
+Served asset /chosen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-02-23 01:34:51 +0800
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-02-23 01:34:51 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 10.0.2.2 at 2015-02-23 01:34:51 +0800
+Served asset /twitter/bootstrap/transition.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 10.0.2.2 at 2015-02-23 01:34:51 +0800
+Served asset /twitter/bootstrap/carousel.js - 200 OK (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 10.0.2.2 at 2015-02-23 01:34:51 +0800
+Served asset /twitter/bootstrap/alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 10.0.2.2 at 2015-02-23 01:34:51 +0800
+Served asset /twitter/bootstrap/dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 10.0.2.2 at 2015-02-23 01:34:51 +0800
+Served asset /twitter/bootstrap/button.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 10.0.2.2 at 2015-02-23 01:34:51 +0800
+Served asset /twitter/bootstrap/collapse.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 10.0.2.2 at 2015-02-23 01:34:51 +0800
+Served asset /twitter/bootstrap/affix.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 10.0.2.2 at 2015-02-23 01:34:51 +0800
+Served asset /twitter/bootstrap/scrollspy.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/typeahead.js?body=1" for 10.0.2.2 at 2015-02-23 01:34:51 +0800
+Served asset /twitter/bootstrap/typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 10.0.2.2 at 2015-02-23 01:34:51 +0800
+Served asset /twitter/bootstrap/modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 10.0.2.2 at 2015-02-23 01:34:51 +0800
+Served asset /twitter/bootstrap/tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 10.0.2.2 at 2015-02-23 01:34:51 +0800
+Served asset /twitter/bootstrap/tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 10.0.2.2 at 2015-02-23 01:34:51 +0800
+Served asset /twitter/bootstrap/popover.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 10.0.2.2 at 2015-02-23 01:34:51 +0800
+Served asset /twitter/bootstrap.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 10.0.2.2 at 2015-02-23 01:34:51 +0800
+Served asset /jquery_nested_form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/chosen-jquery.js?body=1" for 10.0.2.2 at 2015-02-23 01:34:51 +0800
+Served asset /chosen-jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/chosen.jquery.js?body=1" for 10.0.2.2 at 2015-02-23 01:34:51 +0800
+Served asset /chosen.jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lib/abstract-chosen.js?body=1" for 10.0.2.2 at 2015-02-23 01:34:51 +0800
+Served asset /lib/abstract-chosen.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lib/select-parser.js?body=1" for 10.0.2.2 at 2015-02-23 01:34:51 +0800
+Served asset /lib/select-parser.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-02-23 01:34:51 +0800
+Served asset /application.js - 304 Not Modified (2ms)

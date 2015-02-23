@@ -24,8 +24,7 @@ gem 'jquery-rails'
 gem 'devise', '~> 2.2.3'
 
 gem "settingslogic"
-
-gem "anjlab-bootstrap-rails", ">= 2.1", :require => "bootstrap-rails"
+gem "anjlab-bootstrap-rails", "~> 2.3.1.2", :require => "bootstrap-rails"
 gem "simple_form", "~> 2.1.0"
 gem "kaminari"
 
