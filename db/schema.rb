@@ -127,7 +127,7 @@ ActiveRecord::Schema.define(:version => 20130515150235) do
 
   create_table "users", :force => true do |t|
     t.string   "email",                 :default => "", :null => false
-    t.string   "name"
+    t.string   "name"                   :default => "", :null => false 
     t.string   "facebook_id"
     t.integer  "cooperated_docs_count", :default => 0
     t.string   "encrypted_password",    :default => "", :null => false
@@ -142,6 +142,7 @@ ActiveRecord::Schema.define(:version => 20130515150235) do
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
+  add_index "users", ["name"], :name => "index_users_on_name", :unique = > true  
   add_index "users", ["facebook_id"], :name => "index_users_on_facebook_id"
 
 end

@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
-
   def create
-    if current_user = User.create_by_omniauth(request.env['omniauth.auth'], current_user)
+    @user = User.find_by_name(params[:session][:name])
+    if @user
       flash[:notice] = "Login success"
       sign_in_and_redirect :user, current_user
     else

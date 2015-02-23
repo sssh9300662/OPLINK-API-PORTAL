@@ -1,6 +1,6 @@
 defaults: &defaults
   app_name: "OPLINK API Portal"
-  host: "swagger-rails.dev"    
+  host: "apiportal.fwd.wf"    
   multiple_hosts:
     - "example.com"
     - "example.tw"
