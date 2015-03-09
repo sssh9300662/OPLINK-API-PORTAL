@@ -1,6 +1,6 @@
 class ResourcesController < ApplicationController
 
-  include ForeignDomain::Base
+ # include ForeignDomain::Base
 
   def show
     @resource = @doc.resources.find_by_name params[:name]

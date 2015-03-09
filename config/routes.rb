@@ -6,9 +6,12 @@ SwaggerRails::Application.routes.draw do
 
   devise_for :users
 
-  constraints(ForeignDomain::Route) do
-    root :to => "docs#show"
-    get "/:name", :controller => "resources", :action => 'show'
+ # constraints(ForeignDomain::Route) do
+ #   root :to => "docs#show"
+ #   get "/:name", :controller => "resources", :action => 'show'
+ # end
+  scope :controller => "docs", :path => "/docs", :as => "docs" do
+    get '/:name' => :show, :as => "doc"
   end
   
   root :to => 'admin/docs#index'

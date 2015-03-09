@@ -10,4 +10,10 @@
       = form_property.input_field :name, :placeholder => :name, :class => "input-small"
       = form_property.input_field :description, :placeholder => :description, :class => "input-medium"
       = render_data_type_form(form_property, @doc)
+      %label
+        = form_property.input_field :required
+        required
+      %label
+        = form_property.input_field :allow_multiple
+        multiple
       = form_property.input_field :allowable_values, :placeholder => "allow values", :class => "input-medium", :as => :string

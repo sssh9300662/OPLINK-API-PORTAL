@@ -19,8 +19,18 @@ module AdminHelper
     options[:html][:class] ||= "input-small"
     options[:html][:data] = { :type => "data-types-selectable", :to => options[:to], :autohide => options[:auto_hide] }
     content_tag(:select, options[:html]) do
-      collections = [["-- Normal -- ", Parameter::DATA_TYPES[0..-4]], ["-- Models --", doc.models.map{ |model| model.name } + ["custom"] ], ["-- Containers --", Parameter::DATA_TYPES[-3..-1]] ]
-      options_for_select([["-- Data Type --", ""]]) + grouped_options_for_select(collections, :selected => options[:selected])
+    collections = [["-- Normal -- ", Parameter::DATA_TYPES], ["-- Models --", doc.models.map{ |model| model.name } ] ]
+    options_for_select([["-- Data Type --", ""]]) + grouped_options_for_select(collections, :selected => options[:selected])
+    end
+  end
+
+  def render_model_selector(doc, options = {})
+    options[:html] ||= {}
+    options[:html][:class] ||= "input-small"
+    options[:html][:data] = { :type => "data-types-selectable", :to => options[:to], :autohide => options[:auto_hide] }
+    content_tag(:select, options[:html]) do
+    collections = [["-- Models --", ["none"] + doc.models.map{ |model| model.name } ] ]
+    grouped_options_for_select(collections, :selected => options[:selected])
     end
   end
 

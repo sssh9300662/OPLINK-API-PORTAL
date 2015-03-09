@@ -1,4 +1,5 @@
 class Doc < ActiveRecord::Base
+include Rails.application.routes.url_helpers
 
   validates_presence_of :user_id
   validates_presence_of :name
@@ -7,6 +8,7 @@ class Doc < ActiveRecord::Base
 
   belongs_to :user
   has_many :resources, :dependent => :destroy, :order => "sort ASC"
+  has_many :apis, :dependent => :destroy
   has_many :models, :dependent => :destroy
   has_many :doc_users
   has_many :users, :through => :doc_users
@@ -17,31 +19,44 @@ class Doc < ActiveRecord::Base
     api_version
   end
 
-  def to_json
-    { 
-      :apiVersion => version,
-      :swaggerVersion => "1.1",
-      :basePath => "http://#{host_to_json}",
-      :requestPath => request_path,
-      :apis => resources.map{ |resource| { :id => resource.id, :path => "/#{resource.name}.{format}", :description => resource.description } }
+  def to_info
+    {
+      :description => description,
+      :version => version,
+      :title => "#{name}"
     }
   end
-
-  def host_to_json
-    fqdn.present? ? fqdn : "#{subdomain}.#{Setting.host}"
+  
+  def schemes
+    ["http", "https"]
   end
 
-  def preview_link
-    "http://#{host_to_json}"
-  end
+  def to_json
+    apis_json = {}
+    apis.each do |api|
+    apis_json[api.path] = api.to_json
+    end
 
-  private
+    models_json = {}
+    models.each do |model|
+    models_json[model.name] = model.to_json
+    end
 
-  def generate_unique_subdomain
-    begin
-      rand ||= SecureRandom.hex(3)
-    end while !self.class.count(:conditions => ["subdomain = ?", rand]).zero?
-    self.subdomain = rand
+    json = { 
+      :swagger => "2.0",
+      :info => to_info,
+      :host => request_path,
+      :tags => resources.map{ |resource| { :name => resource.name, :description => resource.description }},
+      :schemes => schemes
+    }
+    if !apis.empty?
+      json["paths"] = apis_json
+    end
+
+    if !models.empty?
+      json["definitions"] = models_json
+    end
+    return json
   end
 
 end

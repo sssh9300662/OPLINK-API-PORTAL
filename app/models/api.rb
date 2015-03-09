@@ -11,26 +11,67 @@ class Api < ActiveRecord::Base
   validates_presence_of :doc_id
   validates_presence_of :http_method
   validates_uniqueness_of :path, :scope => [:doc_id, :http_method]
-  HTTP_METHODS = [:GET, :POST, :PUT, :DELETE]
-
+  HTTP_METHODS = [:get, :post, :put, :delete]
+  CONSUME_TYPES = [ "none", "application/json", "application/xml", "application/json, application/xml", "application/x-www-form-urlencoded"]
+  PRODUCE_TYPES = [ "none", "application/json", "application/xml", "application/json, application/xml"]
   before_validation :sync_doc_id
 
-  include ActsAsSortable
+  def to_api_json
+    api_json = {
+      :tags => [resource.name],
+      :summary => summary,
+      :description => note,
+      :operationId => "#{http_method}#{path}"
+    }
+    if !(consume_type.eql? "none" or consume_type == nil)
+      api_json["consumes"] = to_consumes
+    end
+
+    if !(produce_type.eql? "none" or produce_type == nil)
+      api_json["produces"] = to_produces
+    end
+
+    if !parameters.empty?
+      api_json["parameters"] = to_parameters
+    end
+
+    if !error_responses.empty?
+      api_json["responses"] = to_error_responses
+    end
+    
+    return api_json
+  end
+
+  def to_error_responses
+    error_responses_json = {}
+    error_responses.each do |error_response|
+      error_responses_json[error_response.code] = error_response.to_json
+    end
+    error_responses_json
+  end
+
+  def to_parameters
+    parameters_array = Array.new
+    parameters.each do |parameter|
+      parameters_array.push(parameter.to_json)
+    end
+    return parameters_array
+  end
+
+  def to_consumes
+    return consumes_array = consume_type.split(", ")
+  end
+
+  def to_produces
+    return produce_type.split(", ")
+  end
 
   def to_json
-    { 
-      :path => path,
-      :description => resource.description,
-      :operations => [{
-        :httpMethod => http_method,
-        :nickname => nickname,
-        :responseClass => response_class,
-        :summary => summary,
-        :notes => note,
-        :parameters => parameters.map{ |parameter| parameter.to_json },
-        :errorResponses => error_responses.map{ |error_response| error_response.to_json }
-      }]
-    }
+    apis_json = {}
+    doc.apis.where("path = '#{path}'").find_each do |api|
+    apis_json[api.http_method] = api.to_api_json
+    end
+    apis_json
   end
 
   private 

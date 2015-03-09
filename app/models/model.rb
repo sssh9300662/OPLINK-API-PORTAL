@@ -8,14 +8,13 @@ class Model < ActiveRecord::Base
   validates_presence_of :doc_id
 
   def to_json
-    hash_properties = {}
+    properties_json = {}
     properties.each do |property|
-      hash_properties[property.name] = property.to_json
+      properties_json[property.name] = property.to_json
     end
-    json = {
-      :id => name
-    }
-    json[:properties] = hash_properties if hash_properties.size > 0
+    json = {}
+    json[:properties] = properties_json if properties_json.size > 0
     json
   end
+
 end

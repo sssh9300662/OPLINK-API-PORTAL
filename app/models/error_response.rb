@@ -4,8 +4,8 @@ class ErrorResponse < ActiveRecord::Base
   validates_uniqueness_of :code, :scope => [:api_id]
 
   def to_json
-    { :code => code,
-      :reason => reason
+    { 
+      :description => reason
     }
   end  
 end
