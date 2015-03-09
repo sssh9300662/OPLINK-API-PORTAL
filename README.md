@@ -22,7 +22,6 @@ Features
 ========
 
 * Management your owner RESTful API specifications.
-* 
 
 TODOs
 =====
