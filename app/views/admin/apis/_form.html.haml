@@ -9,7 +9,8 @@
 .control-group
   %label.control-label= "Response Data Type"
   .controls
-    = render_model_selector api.resource.doc, :to => "#response_class", :autohide => false
+    = form.input_field :response_class, :id => "response_class"
+    = render_data_type_selector api.resource.doc, :to=> "#response_class", :autohide => false, :selected=>@api.response_class
 .control-group
   %label.control-label= "Error Responses"
   .controls

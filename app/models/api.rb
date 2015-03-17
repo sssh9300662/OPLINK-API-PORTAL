@@ -21,8 +21,10 @@ class Api < ActiveRecord::Base
       :tags => [resource.name],
       :summary => summary,
       :description => note,
-      :operationId => "#{http_method}#{path}"
+      :operationId => "#{http_method}#{path}",
+      :responses => to_responses
     }
+
     if !(consume_type.eql? "none" or consume_type == nil)
       api_json["consumes"] = to_consumes
     end
@@ -34,20 +36,48 @@ class Api < ActiveRecord::Base
     if !parameters.empty?
       api_json["parameters"] = to_parameters
     end
-
-    if !error_responses.empty?
-      api_json["responses"] = to_error_responses
-    end
     
     return api_json
   end
 
-  def to_error_responses
-    error_responses_json = {}
+  def to_responses
+    responses_json = {}
     error_responses.each do |error_response|
-      error_responses_json[error_response.code] = error_response.to_json
+      responses_json[error_response.code] = error_response.to_json
     end
-    error_responses_json
+
+    if response_class != nil
+      responses_json[200] = to_success_response
+    end
+
+    responses_json
+  end
+
+  def to_response_schema
+    model = doc.models.where("name = '#{response_class}'").first
+
+    if model == nil
+    {
+      :type => response_class
+    }
+    else
+    {
+      :'$ref'=> "#/definitions/#{response_class}"
+    }
+    end
+  end
+
+  def to_success_response
+    model = doc.models.where("name = '#{response_class}'").first
+    success_response_json = {
+      :schema => to_response_schema
+    }
+
+    if model != nil
+      success_response_json["description"] = model.description
+    end
+    
+    success_response_json
   end
 
   def to_parameters

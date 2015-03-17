@@ -6,7 +6,7 @@ development: &default
   username: root
   password: "sssh9300662"
 
-test: &TEST
-  <<: *default
-  database: swagger-rails_test
+#test: &TEST
+  #<<: *default
+  #database: swagger-rails_test
 

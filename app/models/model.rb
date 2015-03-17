@@ -9,10 +9,19 @@ class Model < ActiveRecord::Base
 
   def to_json
     properties_json = {}
+
     properties.each do |property|
       properties_json[property.name] = property.to_json
     end
+
+    required_properties = Array.new
+
+    properties.where("required = 1").find_each do |property|
+      required_properties.push(property.name)
+    end
+
     json = {}
+    json[:required] = required_properties  if !required_properties.empty?
     json[:properties] = properties_json if properties_json.size > 0
     json
   end
