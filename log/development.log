@@ -70441,3 +70441,278 @@ Processing by DocsController#show as JSON
   [1m[36mProperty Load (0.3ms)[0m  [1mSELECT `properties`.* FROM `properties` WHERE `properties`.`model_id` = 6 AND (required = 1) ORDER BY `properties`.`id` ASC LIMIT 1000[0m
   [1m[35mResource Load (0.0ms)[0m  SELECT `resources`.* FROM `resources` WHERE `resources`.`doc_id` = 1 ORDER BY sort ASC
 Completed 200 OK in 241ms (Views: 6.3ms | ActiveRecord: 19.8ms)
+Connecting to database specified by database.yml
+  [1m[36m (212.9ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (72.5ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to AddColumnProduceTypeToApis (20150307212)
+  [1m[35m (0.4ms)[0m  ALTER TABLE `apis` ADD `produce_type` varchar(255) AFTER `consume_type`
+Mysql2::Error: Table 'op_api_portal.apis' doesn't exist: ALTER TABLE `apis` ADD `produce_type` varchar(255) AFTER `consume_type`
+Connecting to database specified by database.yml
+  [1m[36m (42.6ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (50.6ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to AddColumnProduceTypeToApis (20150307212)
+  [1m[35m (0.5ms)[0m  ALTER TABLE `apis` ADD `produce_type` varchar(255) AFTER `consume_type`
+Mysql2::Error: Table 'op_api_portal.apis' doesn't exist: ALTER TABLE `apis` ADD `produce_type` varchar(255) AFTER `consume_type`
+Connecting to database specified by database.yml
+  [1m[36m (70.6ms)[0m  [1mDROP DATABASE IF EXISTS `op_api_portal`[0m
+  [1m[35m (0.2ms)[0m  CREATE DATABASE `op_api_portal` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`
+  [1m[36m (23.7ms)[0m  [1mCREATE TABLE `apis` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `resource_id` int(11), `doc_id` int(11), `path` varchar(255), `http_method` varchar(255), `response_class` varchar(255), `consume_type` varchar(255), `produce_type` varchar(255), `summary` varchar(255), `note` varchar(255), `sort` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (28.8ms)[0m  CREATE INDEX `index_apis_on_doc_id` ON `apis` (`doc_id`)
+  [1m[36m (26.3ms)[0m  [1mCREATE INDEX `index_apis_on_path_and_doc_id_and_http_method` ON `apis` (`path`, `doc_id`, `http_method`)[0m
+  [1m[35m (29.5ms)[0m  CREATE INDEX `index_apis_on_resource_id` ON `apis` (`resource_id`)
+  [1m[36m (34.4ms)[0m  [1mCREATE INDEX `index_apis_on_sort_and_doc_id` ON `apis` (`sort`, `doc_id`)[0m
+  [1m[35m (101.7ms)[0m  CREATE TABLE `doc_users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `doc_id` int(11), `user_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (29.1ms)[0m  [1mCREATE INDEX `index_doc_users_on_doc_id_and_user_id` ON `doc_users` (`doc_id`, `user_id`)[0m
+  [1m[35m (30.2ms)[0m  CREATE INDEX `index_doc_users_on_doc_id` ON `doc_users` (`doc_id`)
+  [1m[36m (30.9ms)[0m  [1mCREATE INDEX `index_doc_users_on_user_id` ON `doc_users` (`user_id`)[0m
+  [1m[35m (27.0ms)[0m  CREATE TABLE `docs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `caption` varchar(255), `description` text, `user_id` int(11), `api_version` varchar(255), `request_path` varchar(255), `api_key` varchar(255), `api_key_name` varchar(255) DEFAULT 'token', `fqdn` varchar(255), `subdomain` varchar(255), `cooperated_users_count` int(11) DEFAULT 0, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (31.1ms)[0m  [1mCREATE INDEX `index_docs_on_fqdn` ON `docs` (`fqdn`)[0m
+  [1m[35m (30.0ms)[0m  CREATE INDEX `index_docs_on_name` ON `docs` (`name`)
+  [1m[36m (29.9ms)[0m  [1mCREATE INDEX `index_docs_on_subdomain` ON `docs` (`subdomain`)[0m
+  [1m[35m (29.6ms)[0m  CREATE INDEX `index_docs_on_user_id` ON `docs` (`user_id`)
+  [1m[36m (22.6ms)[0m  [1mCREATE TABLE `error_responses` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `api_id` int(11), `code` int(11), `reason` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (30.1ms)[0m  CREATE INDEX `index_error_responses_on_api_id_and_code` ON `error_responses` (`api_id`, `code`)
+  [1m[36m (28.9ms)[0m  [1mCREATE INDEX `index_error_responses_on_api_id` ON `error_responses` (`api_id`)[0m
+  [1m[35m (14.3ms)[0m  CREATE TABLE `models` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `doc_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (23.3ms)[0m  [1mCREATE INDEX `index_models_on_doc_id_and_name` ON `models` (`doc_id`, `name`)[0m
+  [1m[35m (21.7ms)[0m  CREATE INDEX `index_models_on_doc_id` ON `models` (`doc_id`)
+  [1m[36m (12.3ms)[0m  [1mCREATE TABLE `parameters` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `api_id` int(11), `param_type` varchar(255), `name` varchar(255), `description` varchar(255), `data_type` varchar(255), `required` tinyint(1), `allowable_values` text, `allow_multiple` tinyint(1), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (23.6ms)[0m  CREATE INDEX `index_parameters_on_api_id` ON `parameters` (`api_id`)
+  [1m[36m (11.9ms)[0m  [1mCREATE TABLE `properties` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `model_id` int(11), `name` varchar(255), `data_type` varchar(255), `description` varchar(255), `required` tinyint(1), `allow_multiple` tinyint(1), `allowable_values` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (19.6ms)[0m  CREATE INDEX `index_properties_on_model_id_and_name` ON `properties` (`model_id`, `name`)
+  [1m[36m (22.1ms)[0m  [1mCREATE INDEX `index_properties_on_model_id` ON `properties` (`model_id`)[0m
+  [1m[35m (11.6ms)[0m  CREATE TABLE `resources` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `doc_id` int(11), `name` varchar(255), `description` varchar(255), `sort` int(11) DEFAULT 999, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (22.2ms)[0m  [1mCREATE INDEX `index_resources_on_doc_id` ON `resources` (`doc_id`)[0m
+  [1m[35m (21.1ms)[0m  CREATE INDEX `index_resources_on_sort_and_doc_id` ON `resources` (`sort`, `doc_id`)
+  [1m[36m (14.1ms)[0m  [1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `name` varchar(255), `facebook_id` varchar(255), `cooperated_docs_count` int(11) DEFAULT 0, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (23.2ms)[0m  CREATE UNIQUE INDEX `index_users_on_email` ON `users` (`email`)
+  [1m[36m (21.1ms)[0m  [1mCREATE INDEX `index_users_on_facebook_id` ON `users` (`facebook_id`)[0m
+  [1m[35m (12.9ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36m (30.1ms)[0m  [1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [1m[35m (0.4ms)[0m  SELECT version FROM `schema_migrations`
+  [1m[36m (1.9ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20130515150235')[0m
+  [1m[35m (1.9ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20121209153904')
+  [1m[36m (1.6ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20121209161352')[0m
+  [1m[35m (1195.7ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20121210072420')
+  [1m[36m (2.4ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20121210073709')[0m
+  [1m[35m (1.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20121210075341')
+  [1m[36m (117.2ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20121212041857')[0m
+  [1m[35m (1.7ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20121212042821')
+  [1m[36m (1.5ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20121212122829')[0m
+  [1m[35m (2.0ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20121212135122')
+  [1m[36m (1.2ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20121212141257')[0m
+  [1m[35m (1.3ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20121212162022')
+  [1m[36m (1.6ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20121212170052')[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20121212183302')
+  [1m[36m (1.2ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20121213095736')[0m
+  [1m[35m (1.9ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20121217031318')
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20121217032925')[0m
+  [1m[35m (1.6ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20121223103619')
+  [1m[36m (1.3ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20130512145751')[0m
+  [1m[35m (1.3ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20130512170113')
+  [1m[36m (1.6ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20130515144508')[0m
+  [1m[35m (1.3ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20130515150121')
+  [1m[36m (2.0ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('201503022307')[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20150307212')
+  [1m[36m (1.3ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('201503082148')[0m
+  [1m[35m (1.1ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+  [1m[36m (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to AddColumnProduceTypeToApis (20150307212)
+Migrating to AddColumnConsumeTypeToApis (201503022307)
+Migrating to AddColumnRequiredMultipleToProperties (201503082148)
+Migrating to DeviseCreateUsers (20121209153904)
+Migrating to CreateDocs (20121209161352)
+Migrating to CreateApis (20121210072420)
+Migrating to CreateOperations (20121210073709)
+Migrating to CreateParameters (20121210075341)
+Migrating to CreateResources (20121212041857)
+Migrating to AddColumnResourceIdToAdpis (20121212042821)
+Migrating to AddColumnDocIdToApis (20121212122829)
+Migrating to AddColumnSortToApis (20121212135122)
+Migrating to RemoveUslessColumnAndTable (20121212141257)
+Migrating to CreateErrorResponses (20121212162022)
+Migrating to CreateModels (20121212170052)
+Migrating to CreateProperties (20121212183302)
+Migrating to AddFqdnColumnsToDocs (20121213095736)
+Migrating to AddApiTestingColumnsToDocs (20121217031318)
+Migrating to AddColumnApiKeyNameToDocs (20121217032925)
+Migrating to AddColumnCaptionToDoc (20121223103619)
+Migrating to RemoveColumnBasePathInDocs (20130512145751)
+Migrating to ChangeColumnApiKeyNameInDocs (20130512170113)
+Migrating to CreateDocUsers (20130515144508)
+Migrating to AddColumnCooperatedUsersCountToDocs (20130515150121)
+Migrating to AddColumnCooperatedDocsCountToUsers (20130515150235)
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to AddColumnProduceTypeToApis (20150307212)
+Migrating to AddColumnConsumeTypeToApis (201503022307)
+Migrating to AddColumnRequiredMultipleToProperties (201503082148)
+Migrating to DeviseCreateUsers (20121209153904)
+Migrating to CreateDocs (20121209161352)
+Migrating to CreateApis (20121210072420)
+Migrating to CreateOperations (20121210073709)
+Migrating to CreateParameters (20121210075341)
+Migrating to CreateResources (20121212041857)
+Migrating to AddColumnResourceIdToAdpis (20121212042821)
+Migrating to AddColumnDocIdToApis (20121212122829)
+Migrating to AddColumnSortToApis (20121212135122)
+Migrating to RemoveUslessColumnAndTable (20121212141257)
+Migrating to CreateErrorResponses (20121212162022)
+Migrating to CreateModels (20121212170052)
+Migrating to CreateProperties (20121212183302)
+Migrating to AddFqdnColumnsToDocs (20121213095736)
+Migrating to AddApiTestingColumnsToDocs (20121217031318)
+Migrating to AddColumnApiKeyNameToDocs (20121217032925)
+Migrating to AddColumnCaptionToDoc (20121223103619)
+Migrating to RemoveColumnBasePathInDocs (20130512145751)
+Migrating to ChangeColumnApiKeyNameInDocs (20130512170113)
+Migrating to CreateDocUsers (20130515144508)
+Migrating to AddColumnCooperatedUsersCountToDocs (20130515150121)
+Migrating to AddColumnCooperatedDocsCountToUsers (20130515150235)
+  [1m[35m (0.1ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 10.0.2.2 at 2015-03-23 23:52:41 +0800
+Processing by Admin::DocsController#index as HTML
+Completed 401 Unauthorized in 23ms
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2015-03-23 23:52:41 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (19.5ms)
+  Rendered common/_user_nav.html.erb (0.9ms)
+  Rendered common/_menu.html.erb (22.6ms)
+  Rendered common/_footer.html.erb (0.4ms)
+  Rendered common/_bootstrap_modal.html.erb (0.2ms)
+Completed 200 OK in 651ms (Views: 628.7ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 10.0.2.2 at 2015-03-23 23:52:42 +0800
+Served asset /twitter/bootstrap.css - 200 OK (8ms)
+
+
+Started GET "/assets/bootstrap-override.css?body=1" for 10.0.2.2 at 2015-03-23 23:52:42 +0800
+Served asset /bootstrap-override.css - 200 OK (3ms)
+
+
+Started GET "/assets/chosen.css?body=1" for 10.0.2.2 at 2015-03-23 23:52:42 +0800
+Served asset /chosen.css - 200 OK (3ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-03-23 23:52:42 +0800
+Served asset /application.css - 200 OK (12ms)
+
+
+Started GET "/assets/bootstrap-setting.css?body=1" for 10.0.2.2 at 2015-03-23 23:52:43 +0800
+Served asset /bootstrap-setting.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-03-23 23:52:43 +0800
+Served asset /jquery.js - 200 OK (4ms)
+
+
+Started GET "/assets/twitter/bootstrap-responsive.css?body=1" for 10.0.2.2 at 2015-03-23 23:52:43 +0800
+Served asset /twitter/bootstrap-responsive.css - 200 OK (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 10.0.2.2 at 2015-03-23 23:52:43 +0800
+Served asset /twitter/bootstrap/transition.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-03-23 23:52:43 +0800
+Served asset /jquery_ujs.js - 200 OK (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 10.0.2.2 at 2015-03-23 23:52:43 +0800
+Served asset /twitter/bootstrap/button.js - 200 OK (14ms)
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 10.0.2.2 at 2015-03-23 23:52:43 +0800
+Served asset /twitter/bootstrap/carousel.js - 200 OK (7ms)
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 10.0.2.2 at 2015-03-23 23:52:44 +0800
+Served asset /twitter/bootstrap/collapse.js - 200 OK (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 10.0.2.2 at 2015-03-23 23:52:44 +0800
+Served asset /twitter/bootstrap/alert.js - 200 OK (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 10.0.2.2 at 2015-03-23 23:52:44 +0800
+Served asset /twitter/bootstrap/affix.js - 200 OK (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/typeahead.js?body=1" for 10.0.2.2 at 2015-03-23 23:52:44 +0800
+Served asset /twitter/bootstrap/typeahead.js - 200 OK (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 10.0.2.2 at 2015-03-23 23:52:44 +0800
+Served asset /twitter/bootstrap/scrollspy.js - 200 OK (5ms)
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 10.0.2.2 at 2015-03-23 23:52:44 +0800
+Served asset /twitter/bootstrap/tab.js - 200 OK (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 10.0.2.2 at 2015-03-23 23:52:44 +0800
+Served asset /twitter/bootstrap/popover.js - 200 OK (16ms)
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 10.0.2.2 at 2015-03-23 23:52:44 +0800
+Served asset /twitter/bootstrap/modal.js - 200 OK (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 10.0.2.2 at 2015-03-23 23:52:44 +0800
+Served asset /twitter/bootstrap/tooltip.js - 200 OK (4ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 10.0.2.2 at 2015-03-23 23:52:44 +0800
+Served asset /twitter/bootstrap.js - 200 OK (21ms)
+
+
+Started GET "/assets/lib/abstract-chosen.js?body=1" for 10.0.2.2 at 2015-03-23 23:52:44 +0800
+Served asset /lib/abstract-chosen.js - 200 OK (2ms)
+
+
+Started GET "/assets/lib/select-parser.js?body=1" for 10.0.2.2 at 2015-03-23 23:52:44 +0800
+Served asset /lib/select-parser.js - 200 OK (4ms)
+
+
+Started GET "/assets/chosen.jquery.js?body=1" for 10.0.2.2 at 2015-03-23 23:52:44 +0800
+Served asset /chosen.jquery.js - 200 OK (1ms)
+
+
+Started GET "/assets/chosen-jquery.js?body=1" for 10.0.2.2 at 2015-03-23 23:52:44 +0800
+Served asset /chosen-jquery.js - 200 OK (7ms)
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 10.0.2.2 at 2015-03-23 23:52:45 +0800
+Served asset /jquery_nested_form.js - 200 OK (8ms)
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 10.0.2.2 at 2015-03-23 23:52:45 +0800
+Served asset /twitter/bootstrap/dropdown.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-03-23 23:52:49 +0800
+Served asset /application.js - 200 OK (22ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2015-03-23 23:52:50 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (52.7ms)
+  Rendered common/_user_nav.html.erb (1.2ms)
+  Rendered common/_menu.html.erb (3.3ms)
+  Rendered common/_footer.html.erb (0.1ms)
+  Rendered common/_bootstrap_modal.html.erb (0.0ms)
+Completed 200 OK in 155ms (Views: 154.2ms | ActiveRecord: 0.0ms)
