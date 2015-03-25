@@ -13,7 +13,7 @@ include Rails.application.routes.url_helpers
   has_many :doc_users
   has_many :users, :through => :doc_users
 
-  before_create :generate_unique_subdomain
+  # before_create :generate_unique_subdomain
 
   def version
     api_version
