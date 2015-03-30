@@ -46,7 +46,7 @@ include Rails.application.routes.url_helpers
       :swagger => "2.0",
       :info => to_info,
       :host => request_path,
-      :basePath => request_path,
+      #:basePath => request_path,
       :tags => resources.map{ |resource| { :name => resource.name, :description => resource.description }},
       :schemes => schemes
     }
