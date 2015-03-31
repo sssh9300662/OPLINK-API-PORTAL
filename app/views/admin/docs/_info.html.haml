@@ -8,7 +8,8 @@
       = "Preview: "
       = link_to docs_doc_url(doc.name), docs_doc_path(doc.name)
     - if doc.description.present?
-      %li= "description: #{doc.description}"
+      %li= "description:"
+      = raw(doc.description)
     %li= "version: #{doc.version}"
     - if doc.request_path.present?
       %li= "API testing url format: #{doc.request_path}/{API Path}.json?#{doc.api_key_name}=#{doc.api_key}"
