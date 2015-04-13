@@ -2,9 +2,9 @@ development: &default
   adapter: mysql2
   encoding: utf8
   database: op_api_portal
-  host: localhost
+  host: 192.168.5.70
   username: root
-  password: "1234"
+  password: "oplink456"
 
 #test: &TEST
   #<<: *default
