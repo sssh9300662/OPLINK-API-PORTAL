@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(:version => 20130515150235) do
     t.string   "consume_type"
     t.string   "produce_type"
     t.string   "summary"
-    t.string   "note"
+    t.text     "note"
     t.integer  "sort"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
@@ -106,12 +106,12 @@ ActiveRecord::Schema.define(:version => 20130515150235) do
     t.integer  "model_id"
     t.string   "name"
     t.string   "data_type"
-    t.string   "description"
+    t.string   "description",      :limit => 1024
     t.boolean  "required"
     t.boolean  "allow_multiple"
     t.string   "allowable_values"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.datetime "created_at",                       :null => false
+    t.datetime "updated_at",                       :null => false
   end
 
   add_index "properties", ["model_id", "name"], :name => "index_properties_on_model_id_and_name"
